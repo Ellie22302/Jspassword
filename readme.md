@@ -14,3 +14,4 @@ Clicking the Generate button will give some prompts
 
 -Then it will add it to the text box
 
+I was given the code for the html and css by the course I am taking and used bits and peices from lessons as well.
