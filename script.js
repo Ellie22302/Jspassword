@@ -19,6 +19,29 @@ var generateBtn = document.querySelector("#generate");
 
 generateBtn.addEventListener("click", writePassword);
 
+function writePassword() { 
+    var correctPrompts = getPrompts(); //T/F question
+    var passwordText = document.querySelector("#password");
+
+  if (correctPrompts){
+    var newPassword = generatePassword();
+    passwordText.value= newPassword;
+
+  passwordText.value = newPassword;
+  } else{//redundancy
+    passwordText.value - "";
+  }
+}
+//The Generation itself
+function generatePassword(){
+    var password="";
+    for(var i=0; i < characterLength; i++ ){
+        var randomIndex = Math.floor(Math.random()* choiceArray.length);
+        password = password +choiceArray[randomIndex];
+       }
+       return password;
+
+}
 //Prompts for the password
 function getPrompts(){
     choiceArray = [];
